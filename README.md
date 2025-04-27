@@ -9,7 +9,6 @@ docker run -p 3000:3000 foodmate-app
 
 Home Page: http://localhost:3000
 Student API Endpoint: http://localhost:3000/api/student
-Example:
 {
   "name": "Ritika Sharma",
   "studentId": "224686664"
