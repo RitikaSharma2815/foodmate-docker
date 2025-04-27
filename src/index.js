@@ -5,6 +5,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import session from "express-session";
 import mongoose from "mongoose";
+import studentRoute from './routes/studentRoute.js';
 
 import { ENV } from "./utils/envLoader.js";
 
@@ -35,6 +36,7 @@ app.use(
 
 app.use("/auth", authRoutes);
 app.use("/", homeRoutes);
+app.use('/api', studentRoute);
 
 app.listen(ENV.PORT, () => {
     logger.info(`Server running at http://localhost:${ENV.PORT}`);
